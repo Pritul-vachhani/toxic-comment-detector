@@ -1,41 +1,33 @@
-# Toxic Comment Classifier (ECS 171 Fall 2025 — Team 6)
+# 🧪 Toxic Comment Detector
 
-##  Overview
-This project builds a **Toxic Comment Classifier** that automatically detects and flags toxic or harmful comments using NLP.  
-It uses Kaggle’s **Jigsaw Toxic Comment Classification** dataset and explores both traditional ML (TF-IDF + Logistic Regression) and Transformer-based models (DistilBERT).
+A full-stack machine learning system that detects toxic comments using a custom-trained Logistic Regression NLP model, a FastAPI backend, and a modern React + Vite frontend.  
+Supports **single comment analysis**, **highlighting toxic words**, **adjustable strictness**, and **CSV batch auditing**.
 
 ---
-### 1. Clone the Repository
-```bash
-git clone https://github.com/<your-username>/ecs171-toxic-comment-classifier.git
-cd ecs171-toxic-comment-classifier
-```
 
-### 2. Create and Activate Environment
-```bash
-python -m venv venv
-source venv/bin/activate       # macOS/Linux
-# or
-venv\Scripts\activate          # Windows
+## 🚀 Features
 
-pip install -r requirements.txt
+### ✔️ Machine Learning
+- TF-IDF + Logistic Regression classifier  
+- Returns: `label`, `confidence score`, `toxic triggers`, highlighted text  
+- Custom cleaned dataset  
+- Model stored as `.joblib`
 
-```
+### ✔️ Backend (FastAPI)
+- Endpoint: `POST /predict`
+- Accepts a comment and returns toxicity analysis  
+- Handles CORS for frontend integration  
 
-### 3. Download the dataset
-This requires kaggle login, and you have to join the competition and select accept to T&C and make sure your phone number is verified with kaggle to be able to acces the dataset
-```bash
-mkdir -p data/raw
-kaggle competitions download -c jigsaw-toxic-comment-classification-challenge
-unzip jigsaw-toxic-comment-classification-challenge.zip -d data/raw/
-```
+### ✔️ Frontend (React + TypeScript + Vite)
+- Clean UI for comment analysis  
+- Toxic phrase highlighting  
+- Strictness slider (-2 to +2)  
+- CSV upload → CSV toxic analysis download  
+- Real-time results from FastAPI backend  
 
-### 4. Verify Installation in your active envirnoment
-```bash
-python -c "import torch, transformers, sklearn, pandas; print('Environment setup successful!')"
-You should see
-Environment setup successful!
+---
 
+## 📂 Project Structure
 
 
 
