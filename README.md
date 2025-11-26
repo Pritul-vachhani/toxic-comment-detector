@@ -46,6 +46,33 @@ Supports **single comment analysis**, **highlighting toxic words**, **adjustable
 
 ---
 
+### 📥 Download Required Model File
+
+The Logistic Regression model file is **not stored directly in the repo** due to size limits.  
+To run the backend successfully, you must download it manually.
+
+1. In the root of this repository, open the file **`Google_Drive.txt`**.
+2. Click the Google Drive link inside the file.
+3. Download the folder named **`Download_these_files`**.
+4. Inside that folder, locate:
+
+```
+toxic_logreg_cv.joblib
+```
+
+5. Move **`toxic_logreg_cv.joblib`** into the **root** of the project:
+
+```
+toxic-comment-detector/
+│
+├── toxic_logreg_cv.joblib   ⬅️ place it here
+├── src/
+├── frontend/
+└── ...
+```
+
+This file is required for the FastAPI backend to load the trained model.
+
 ## 🐍 Backend Setup (FastAPI)
 
 From the project root:
