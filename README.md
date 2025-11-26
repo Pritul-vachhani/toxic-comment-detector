@@ -59,9 +59,7 @@ Run the API:
 
     python -m uvicorn src.api:app --reload
 
-Backend URL:
-
-    http://127.0.0.1:8000
+Backend URL: http://127.0.0.1:8000/docs
 
 ---
 
