@@ -65,30 +65,30 @@ Backend URL: http://127.0.0.1:8000/docs
 
 ## 🌐 Frontend Setup (React + Vite)
 
-🔧 Prerequisite: Node.js + npm
-
+### 🔧 Prerequisite: Node.js + npm
 Make sure Node.js and npm are installed before running the frontend.
 
 You can verify by running:
 
+```bash
 node -v
 npm -v
-
+```
 
 If you see “command not found,” install Node.js (which includes npm):
 
-macOS:
+**macOS:**
 
-Download the LTS version from https://nodejs.org
+1. Download the LTS version from https://nodejs.org  
+2. Install normally  
+3. Ensure `/usr/local/bin` is in your PATH:
 
-Install normally
-
-Ensure /usr/local/bin is in your PATH:
-
+```bash
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
+```
 
-This makes the npm command available system-wide.
+This makes the `npm` command available system-wide.
 
 Open a **second terminal**, then:
 
