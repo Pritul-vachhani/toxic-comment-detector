@@ -14,7 +14,7 @@ Supports **single comment analysis**, **highlighting toxic words**, **adjustable
 - Model stored as `.joblib`
 
 ### ✔️ Backend (FastAPI)
-- Endpoint: `POST /predict`
+- Endpoint: `POST /predict`  
 - Accepts a comment and returns toxicity analysis  
 - Handles CORS for frontend integration  
 
@@ -28,109 +28,117 @@ Supports **single comment analysis**, **highlighting toxic words**, **adjustable
 ---
 
 ## 📂 Project Structure
-toxic-comment-detector/
-│
-├── frontend/ # React + Vite UI
-│ └── src/App.tsx # Main UI logic
-│
-├── src/ # FastAPI backend
-│ ├── api.py
-│ └── model_service.py
-│
-├── notebooks/ # Model training notebooks
-├── reports/ # Presentation materials
-├── requirements.txt
-├── environment.yml
-└── README.md
+
+    toxic-comment-detector/
+    │
+    ├── frontend/               # React + Vite UI
+    │   └── src/App.tsx         # Main UI logic
+    │
+    ├── src/                    # FastAPI backend
+    │   ├── api.py
+    │   └── model_service.py
+    │
+    ├── notebooks/              # Model training notebooks
+    ├── reports/                # Presentation materials
+    ├── requirements.txt
+    ├── environment.yml
+    └── README.md
 
 ---
 
 ## 🐍 Backend Setup (FastAPI)
 
-```bash
-cd toxic-comment-detector
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+From the project root:
 
+    cd toxic-comment-detector
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
 
 Run the API:
 
-python -m uvicorn src.api:app --reload
-
+    python -m uvicorn src.api:app --reload
 
 Backend URL:
 
-http://127.0.0.1:8000
+    http://127.0.0.1:8000
 
-🌐 Frontend Setup (React + Vite)
+---
 
-Open a second terminal:
+## 🌐 Frontend Setup (React + Vite)
 
-cd frontend
-npm install
-npm run dev
+Open a **second terminal**, then:
 
+    cd frontend
+    npm install
+    npm run dev
 
 Frontend URL:
 
-http://localhost:5173
+    http://localhost:5173
 
-📡 API Usage
-POST /predict
-Request
-{
-  "text": "I hate you"
-}
+---
 
-Response
-{
-  "label": "toxic",
-  "prob": 0.9823,
-  "triggers": ["hate"],
-  "highlighted_text": "I <mark>hate</mark> you"
-}
+## 📡 API Usage
 
-📊 CSV Batch Moderation
+### POST `/predict`
 
-Upload a .csv with a column named:
+Request body:
 
-comment or
+    {
+      "text": "I hate you"
+    }
 
-text
+Example response:
 
-Output CSV includes:
+    {
+      "label": "toxic",
+      "prob": 0.9823,
+      "triggers": ["hate"],
+      "highlighted_text": "I <mark>hate</mark> you"
+    }
 
-verdict
+---
 
-risk score
+## 📊 CSV Batch Moderation
 
-toxic triggers
+Upload a `.csv` with a column named:
 
-highlighted text
+- `comment` **or**
+- `text`
+
+The output CSV includes:
+
+- verdict  
+- risk score  
+- toxic triggers  
+- highlighted text  
 
 Processed client-side for speed.
 
-🔧 Strictness Levels
-Level	Meaning
--2	Very sensitive
--1	Sensitive
-0	Balanced (default)
-+1	Tolerant
-+2	Very tolerant
-🧠 Model Details
+---
 
-TF-IDF vectorizer
+## 🔧 Strictness Levels
 
-Logistic Regression classifier
+| Level | Meaning           |
+|-------|-------------------|
+| -2    | Very sensitive    |
+| -1    | Sensitive         |
+| 0     | Balanced (default)|
+| +1    | Tolerant          |
+| +2    | Very tolerant     |
 
-Preprocessing:
+---
 
-Lowercasing
+## 🧠 Model Details
 
-URL removal
+- TF-IDF vectorizer  
+- Logistic Regression classifier  
 
-Username removal
+Preprocessing steps:
 
-Punctuation stripping
+- Lowercasing  
+- URL removal  
+- Username removal  
+- Punctuation stripping  
 
