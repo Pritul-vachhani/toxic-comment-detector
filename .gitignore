@@ -1,0 +1,45 @@
+# ---- Python / Jupyter ----
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ---- Environments ----
+venv/
+.tox/
+.env/
+*.env
+.venv/
+conda-meta/
+*.egg-info/
+
+# ---- Data ----
+data/raw/*
+!data/raw/.gitkeep  # keep folder structure but ignore actual data
+data/processed/*
+!data/processed/.gitkeep
+
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---- Logs / Outputs ----
+logs/
+*.log
+outputs/
+reports/figures/
+
+# ---- Misc ----
+*.zip
+*.tar.gz
+data/
+toxic_logreg_cv.joblib
+models/
+toxic_logreg_cv.joblib
+data/train_cleaned (2).csv
+data/test_cleaned (2).csv
+node_modules/
+.venv/
+data/
+*.joblib

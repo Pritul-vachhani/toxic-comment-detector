@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+tqdm
+torch
+transformers
+imbalanced-learn
+kaggle
+fastapi
+uvicorn[standard]
+joblib
