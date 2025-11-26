@@ -1,0 +1,10 @@
+Models (Colab links)
+
+Logistic Regression Model:
+https://colab.research.google.com/drive/1vt-rucg2xMiq53zquPY23jDldh6l96Ff?usp=sharing#scrollTo=iu6_-Ajy_uJz
+
+Random Forest Model:
+https://colab.research.google.com/drive/1R7fZnxdoLJl1X_5oYbVXz8LyVGTXyxnj?usp=sharing
+
+CNN Model:
+https://colab.research.google.com/drive/1I985yUQ7Y2dvn3JXJb-mKzoGK-Fug9CX?usp=sharing
