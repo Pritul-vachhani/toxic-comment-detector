@@ -203,6 +203,6 @@ Preprocessing steps:
 In our project, we constructed 3 models total: Logistic Regression, Random Forest, and Convolutional Neural Network.
 These models are located in the notebooks folder to view. 
 
-If you would like to train a model, it will prompt you for a data file, which you can use the data.csv provided, or
-download from the Kaggle data base at https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data (train.csv).
+If you would like to train a model, it will prompt you for a data file, which you can download from the Kaggle data base at
+https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data (train.csv).
 
