@@ -75,9 +75,12 @@ This file is required for the FastAPI backend to load the trained model.
 
 ## 🐍 Backend Setup (FastAPI)
 
-From the project root:
+From the project root, run the following Linux/Unix commands. 
 
-    cd toxic-comment-detector
+If your computer does not support Linux/Unix you can use WSL: https://learn.microsoft.com/en-us/windows/wsl/install
+
+The installation may take some time if you do not have the relevant libraries preinstalled.
+
     python3 -m venv .venv
     source .venv/bin/activate
     pip install -r requirements.txt
@@ -85,6 +88,8 @@ From the project root:
 Run the API:
 
     python -m uvicorn src.api:app --reload
+
+Once it states Application Startup Complete, you can prompt the model using the Frontend.
 
 Backend URL: http://127.0.0.1:8000/docs
 
@@ -190,5 +195,14 @@ Preprocessing steps:
 - Lowercasing  
 - URL removal  
 - Username removal  
-- Punctuation stripping  
+- Punctuation stripping
+
+---
+## 💡 View and Train Models
+
+In our project, we constructed 3 models total: Logistic Regression, Random Forest, and Convolutional Neural Network.
+These models are located in the notebooks folder to view. 
+
+If you would like to train a model, it will prompt you for a data file, which you can use the data.csv provided, or
+download from the Kaggle data base at https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data (train.csv).
 
